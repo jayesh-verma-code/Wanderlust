@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const defaultListingLink = "https://images.unsplash.com/photo-1778855024471-845ffeb951fa?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGZyZWUlMjBpbWFnZXMlMjBvZiUyMGJlYWNoJTIwY2FmZXxlbnwwfHwwfHx8MA%3D%3D";
+const defaultListingLink = "https://res.cloudinary.com/dzhczzqwf/image/upload/v1780122916/img2_qvl7mi.jpg";
 
 const listingSchema = new Schema({
   title: {
