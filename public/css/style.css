@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -18,3 +18,15 @@ a {
     font-weight: bold;
 }
 
+a:hover {
+    color: #337dbe;
+} */
+
+nav {
+    height: 5rem;
+    background-color: white;
+}
+
+nav .navbar-brand {
+    color: #ff385c;
+}

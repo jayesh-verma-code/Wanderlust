@@ -9,9 +9,9 @@
 <body>
     <%- include("../layouts/navbar.ejs") %>
     <h1>All Listings</h1>
-    <form method="GET" action="/listings/new">
+    <!-- <form method="GET" action="/listings/new">
         <button>New Listing</button>
-    </form>
+    </form> -->
     <ul>
         <% for(let list of allListings) { %>
         <li>
@@ -19,5 +19,6 @@
         </li>
         <% } %>
     </ul>
+    <%- include("../layouts/script.ejs") %>
 </body>
 </html>
