@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create New Listing</title>
+    <%- include("../layouts/metadata.ejs") %>
 </head>
 <body>
+    <%- include("../layouts/navbar.ejs") %>
     <h3>Create a new listing</h3>
     <form method="POST" action="/listings">
         <input name="listing[title]" placeholder="Enter title" type="text">

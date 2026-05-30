@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wanderlust</title>
+    <%- include("../layouts/metadata.ejs") %>
 </head>
 <body>
+    <%- include("../layouts/navbar.ejs") %>
     <h1>All Listings</h1>
     <form method="GET" action="/listings/new">
         <button>New Listing</button>

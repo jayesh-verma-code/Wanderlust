@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>General</title>
+    <%- include("../layouts/metadata.ejs") %>
 </head>
 <body>
+    <%- include("../layouts/navbar.ejs") %>
     <h3>Update listing</h3>
     <form method="POST" action="/listings/<%= listing._id %>?_method=PUT">
         <input name="listing[title]" value="<%= listing.title %>" type="text">
