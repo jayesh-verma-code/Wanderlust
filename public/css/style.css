@@ -22,6 +22,26 @@ a:hover {
     color: #337dbe;
 } */
 
+html, body {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;     
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+main {
+    flex: 1;
+}
+
 nav {
     height: 5rem;
     background-color: white;
@@ -42,4 +62,9 @@ footer h5 {
 
 footer a {
     color: #222;
+}
+
+.card:hover .card-img-overlay {
+    background-color: #fff;
+    opacity: 20%;
 }

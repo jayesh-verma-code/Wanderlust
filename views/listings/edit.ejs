@@ -1,30 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>General</title>
     <%- include("../layouts/metadata.ejs") %>
-</head>
-<body>
+  </head>
+  <body>
     <%- include("../layouts/navbar.ejs") %>
-    <h3>Update listing</h3>
-    <form method="POST" action="/listings/<%= listing._id %>?_method=PUT">
-        <input name="listing[title]" value="<%= listing.title %>" type="text">
-        <br>
+    <main>
+      <h3>Update listing</h3>
+      <form method="POST" action="/listings/<%= listing._id %>?_method=PUT">
+        <input name="listing[title]" value="<%= listing.title %>" type="text" />
+        <br />
         <textarea name="listing[description]" type="text"><%= listing.description %></textarea>
-        <br>
-        <input name="listing[price]" value="<%= listing.price %>" type="number">
-        <br>
-        <input name="listing[image]" value="<%= listing.image %>" type="text">
-        <br>
-        <input name="listing[location]" value="<%= listing.location %>" type="text">
-        <br>
-        <input name="listing[country]" value="<%= listing.country %>" type="text">
-        <br>
+        <br />
+        <input
+          name="listing[price]"
+          value="<%= listing.price %>"
+          type="number"
+        />
+        <br />
+        <input name="listing[image]" value="<%= listing.image %>" type="text" />
+        <br />
+        <input
+          name="listing[location]"
+          value="<%= listing.location %>"
+          type="text"
+        />
+        <br />
+        <input
+          name="listing[country]"
+          value="<%= listing.country %>"
+          type="text"
+        />
+        <br />
         <button>Update</button>
-    </form>
-    <%- include("../layouts/footer.ejs") %>
-    <%- include("../layouts/script.ejs") %>
-</body>
+      </form>
+    </main>
+    <%- include("../layouts/footer.ejs") %> <%- include("../layouts/script.ejs")
+    %>
+  </body>
 </html>
