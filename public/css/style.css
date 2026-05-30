@@ -30,3 +30,16 @@ nav {
 nav .navbar-brand {
     color: #ff385c;
 }
+
+footer {
+    background-color: white;
+    color: #222;
+}
+
+footer h5 {
+    color : #ff385c;
+}
+
+footer a {
+    color: #222;
+}
