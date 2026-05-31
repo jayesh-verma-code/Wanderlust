@@ -30,7 +30,7 @@ main()
 //===========API=============
 
 app.get('/', (req, res) => {
-    res.send("Welcome to Wanderlust");
+    res.redirect("/listings");
 });
 
 //Listings Index Route

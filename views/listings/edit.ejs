@@ -10,19 +10,20 @@
     <%- include("../layouts/navbar.ejs") %>
     <main class="container mt-4">
       <h3 class="mb-4">Update listing</h3>
-      <form method="POST" action="/listings/<%= listing._id %>?_method=PUT">
+
+      <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation">
 
         <label for="title" class="form-label">Title</label>
-        <input id="title" class="form-control mb-3" name="listing[title]" value="<%= listing.title %>" type="text" />
+        <input id="title" class="form-control mb-3" name="listing[title]" value="<%= listing.title %>" type="text" required/>
      
         <label for="description" class="form-label">Description</label>
-        <textarea id="description" class="form-control mb-3" name="listing[description]" type="text"><%= listing.description %></textarea>
+        <textarea id="description" class="form-control mb-3" name="listing[description]" type="text"><%= listing.description %></textarea required>
       
         <div class="row">
 
           <div class="col col-lg-6 col-sm-12">
             <label for="price" class="form-label">Price</label>
-            <input name="listing[price]" value="<%= listing.price %>" type="number" class="form-control mb-3" required/>
+            <input name="listing[price]" value="<%= listing.price %>" type="number" class="form-control mb-3" min="0" required/>
           </div>
 
           <div class="col-12 col-lg-6 col-sm-12">
