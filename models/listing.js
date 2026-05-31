@@ -16,6 +16,7 @@ const listingSchema = new Schema({
   price: {
     type: Number,
     default: 0,
+    set: (v) => v === "" ? 0 : v
   },
   location: String,
   country: String,

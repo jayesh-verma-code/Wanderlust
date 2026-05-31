@@ -64,6 +64,18 @@ footer a {
     color: #222;
 }
 
+.card {
+    border: none;
+}
+
+.card .card-img-top {
+    border-radius: 10px;
+}
+
+.card .card-body {
+    line-height: 5px;
+}
+
 .card:hover .card-img-overlay {
     background-color: #fff;
     opacity: 20%;

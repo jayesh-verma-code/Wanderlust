@@ -8,38 +8,52 @@
   </head>
   <body>
     <%- include("../layouts/navbar.ejs") %>
-    <main>
-      <h3>Create a new listing</h3>
+    <main class="container mt-4">
+      <h3 class="mb-4">Create a new listing</h3>
       <form method="POST" action="/listings">
-        <input name="listing[title]" placeholder="Enter title" type="text" />
-        <br />
+
+        <label for="title" class="form-label">Title</label>
+        <input id="title" name="listing[title]" placeholder="Enter title" type="text" class="form-control mb-3" required/>
+        
+        <label for="description" class="form-label">Description</label>
         <textarea
+          id="description"
           name="listing[description]"
+          class="form-control mb-3"
           placeholder="Enter description"
           type="text"
+          required
         ></textarea>
-        <br />
-        <input name="listing[price]" placeholder="Enter price" type="number" />
-        <br />
-        <input
-          name="listing[image]"
-          placeholder="Enter image url"
-          type="text"
-        />
-        <br />
-        <input
-          name="listing[location]"
-          placeholder="Enter location"
-          type="text"
-        />
-        <br />
-        <input
-          name="listing[country]"
-          placeholder="Enter country"
-          type="text"
-        />
-        <br />
-        <button>Create</button>
+
+        <div class="row">
+
+          <div class="col col-lg-6 col-sm-12">
+            <label for="price" class="form-label">Price</label>
+            <input name="listing[price]" placeholder="Enter price" type="number" class="form-control mb-3" required/>
+          </div>
+
+          <div class="col-12 col-lg-6 col-sm-12">
+            <label for="image" class="form-label">Image URL</label>
+            <input id="image" name="listing[image]" placeholder="Enter image url" type="text" class="form-control mb-3"/>
+          </div>
+      
+        </div>
+
+        <div class="row">
+
+          <div class="col col-lg-8 col-sm-12">
+           <label for="location" class="form-label">Address</label>
+           <input id="location" name="listing[location]" placeholder="Enter location" type="text"  class="form-control mb-3" required/>
+          </div>
+
+          <div class="col-12 col-lg-4 col-sm-12">
+            <label for="country" class="form-label">Country</label>
+            <input id="country" name="listing[country]" placeholder="Enter country" type="text"  class="form-control mb-3" required/>
+          </div>
+      
+        </div>
+         
+        <button type="submit" class="btn btn-dark mt-3">Create</button>
       </form>
     </main>
     <%- include("../layouts/footer.ejs") %> <%- include("../layouts/script.ejs")

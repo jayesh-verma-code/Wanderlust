@@ -8,34 +8,46 @@
   </head>
   <body>
     <%- include("../layouts/navbar.ejs") %>
-    <main>
-      <h3>Update listing</h3>
+    <main class="container mt-4">
+      <h3 class="mb-4">Update listing</h3>
       <form method="POST" action="/listings/<%= listing._id %>?_method=PUT">
-        <input name="listing[title]" value="<%= listing.title %>" type="text" />
-        <br />
-        <textarea name="listing[description]" type="text"><%= listing.description %></textarea>
-        <br />
-        <input
-          name="listing[price]"
-          value="<%= listing.price %>"
-          type="number"
-        />
-        <br />
-        <input name="listing[image]" value="<%= listing.image %>" type="text" />
-        <br />
-        <input
-          name="listing[location]"
-          value="<%= listing.location %>"
-          type="text"
-        />
-        <br />
-        <input
-          name="listing[country]"
-          value="<%= listing.country %>"
-          type="text"
-        />
-        <br />
-        <button>Update</button>
+
+        <label for="title" class="form-label">Title</label>
+        <input id="title" class="form-control mb-3" name="listing[title]" value="<%= listing.title %>" type="text" />
+     
+        <label for="description" class="form-label">Description</label>
+        <textarea id="description" class="form-control mb-3" name="listing[description]" type="text"><%= listing.description %></textarea>
+      
+        <div class="row">
+
+          <div class="col col-lg-6 col-sm-12">
+            <label for="price" class="form-label">Price</label>
+            <input name="listing[price]" value="<%= listing.price %>" type="number" class="form-control mb-3" required/>
+          </div>
+
+          <div class="col-12 col-lg-6 col-sm-12">
+            <label for="image" class="form-label">Image URL</label>
+            <input id="image" name="listing[image]" value="<%= listing.image %>" type="text" class="form-control mb-3"/>
+          </div>
+      
+        </div>
+
+
+        <div class="row">
+
+          <div class="col col-lg-8 col-sm-12">
+           <label for="location" class="form-label">Address</label>
+           <input id="location" name="listing[location]" value="<%= listing.location %>" type="text"  class="form-control mb-3" required/>
+          </div>
+
+          <div class="col-12 col-lg-4 col-sm-12">
+            <label for="country" class="form-label">Country</label>
+            <input id="country" name="listing[country]" value="<%= listing.country %>" type="text"  class="form-control mb-3" required/>
+          </div>
+
+</div>
+    
+         <button type="submit" class="btn btn-dark mt-3">Update</button>
       </form>
     </main>
     <%- include("../layouts/footer.ejs") %> <%- include("../layouts/script.ejs")
