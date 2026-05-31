@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPS!</title>
+    <%- include("./layouts/metadata.ejs") %>
+</head>
+<body>
+    <main class="container error-box">
+        <h1 style="color: #ff385c;">Error <%= statusCode %></h1>
+        <p style="font-weight: 500; color: #333; text-align: center;"><%= message %></p>
+        <div style="display: flex; gap: 10px;">
+            <button class="btn btn-dark" onclick="history.back()">Go Back</button>
+            <a href="/listings" class="btn btn-dark">Home</a>
+        </div>
+    </main>
+    <%- include("./layouts/footer.ejs") %>
+</body>
+</html>

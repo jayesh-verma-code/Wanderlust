@@ -80,3 +80,11 @@ footer a {
     background-color: #fff;
     opacity: 20%;
 }
+
+.error-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
